@@ -17,6 +17,7 @@ public class InsertValuesInExcel {
 		try {
 			Fillo fillo = new Fillo();
 			Connection connection = fillo.getConnection(filePath);
+			System.out.println("Connection Stablish");
 			connection.executeUpdate(query);
 			connection.close();
 		} catch (FilloException e) {

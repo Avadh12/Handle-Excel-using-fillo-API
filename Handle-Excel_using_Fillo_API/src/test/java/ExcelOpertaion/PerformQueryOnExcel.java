@@ -21,6 +21,7 @@ public class PerformQueryOnExcel {
 		try {
 			Fillo fillo = new Fillo();
 			Connection connection = fillo.getConnection(filePath);
+			System.out.println("Connection Established");
 			Recordset recordset = connection.executeQuery(query);
 			while (recordset.next()) {
 				System.out.println(recordset.getField("StudentID") + " " + recordset.getField("First Name") + " "
